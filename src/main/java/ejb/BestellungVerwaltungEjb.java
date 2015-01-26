@@ -56,7 +56,7 @@ public class BestellungVerwaltungEjb implements BestellungVerwaltungInt{
         if (!(diff > 0)) {
             diff += 7;
         }
-        if (dayOfWeek == Calendar.SUNDAY   ||
+        if (dayOfWeek == Calendar.SUNDAY ||
             dayOfWeek == Calendar.MONDAY) {
             diff += 7;
             }
