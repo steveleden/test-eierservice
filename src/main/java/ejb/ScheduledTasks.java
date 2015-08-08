@@ -10,8 +10,8 @@ public class ScheduledTasks {
 		System.out.println("Init Scheduler.... ");
 	}
 	
-	@Schedule(second = "*/10", minute = "*", hour = "*")
+	@Schedule(second = "*", minute = "*/30", hour = "*")
 	public void someTask() {
-		System.out.println("5 seconds have passed");
+		System.out.println("Test scheduler");
 	}
 }
