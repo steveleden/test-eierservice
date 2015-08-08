@@ -1,11 +1,9 @@
 package ejb;
 
 import javax.ejb.Schedule;
-import javax.ejb.Singleton;
-import javax.ejb.Startup;
+import javax.ejb.Stateless;
 
-@Singleton
-@Startup
+@Stateless
 public class ScheduledTasks {
 
 	public ScheduledTasks() {
