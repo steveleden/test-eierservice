@@ -1,6 +1,6 @@
 package ejb;
 
-import javax.ejb.Schedule;
+//import javax.ejb.Schedule;
 import javax.ejb.Stateless;
 
 @Stateless
