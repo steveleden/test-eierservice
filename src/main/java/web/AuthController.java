@@ -16,7 +16,8 @@ import ejb.BenutzerVerwaltungInt;
 import ejb.KundenVerwaltungInt;
 import entity.Kunde;
  
-@ManagedBean
+
+@ManagedBean 
 @SessionScoped
 public class AuthController implements Serializable {
 
