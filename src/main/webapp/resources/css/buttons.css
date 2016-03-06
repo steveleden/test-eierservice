@@ -162,7 +162,7 @@
 
 	display:inline-block;
 	cursor:pointer;
-	color:#ffffe6;
+	color:black;
 	font-family:arial;
 	font-size:15px;
 	font-weight:bold;
@@ -173,6 +173,12 @@
 
 .bestellButton:hover {
 
+
+	-moz-box-shadow: 0px 0px 15px 2px #535763;
+	-webkit-box-shadow: 0px 0px 15px 2px #535763;
+	box-shadow: 0px 0px 5px 3px white;		
+	
+	
 	background: url('/resources/images/eigelb.jpg') no-repeat center;
 	background-color:#ffffff;
 	color: black;
