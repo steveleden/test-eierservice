@@ -19,18 +19,18 @@
 			
 			<div >
 				<div id="login-small" class="w3-container w3-center w3-green">
-			        <h:form class="w3-hide-medium w3-hide-large">
-			            <a id="btn-login" class="w3-btn w3-green w3-border w3-border-white w3-text-white"
+			        <h:form class="w3-hide-medium w3-hide-large w3-padding-8">
+			            <a id="btn-login" 
+			              		class="w3-btn w3-green w3-border w3-border-white w3-text-white"
 			                    href="javascript:void(0);" onclick="showLoginExpanded()">
 			                Login
 			            </a>
 			        </h:form>
-			        <br />
 
 			        
 				</div>
 
-				<h:form class="w3-container w3-green w3-hide-small">
+				<h:form class="w3-container w3-light-green w3-hide-small">
 					<h:panelGrid columns="5" styleClass="w3-center" cellpadding="4" border="1">
 					    <h:outputLabel value="Benutzer:" styleClass="w3-text-sand"/>		     
 					    <h:inputText id="the_user"
@@ -70,7 +70,7 @@
 	       		</h:form>
 
 			    <div id="login-expanded" class="w3-center w3-hide w3-hide-large w3-hide-medium">
-			        <h:form class="w3-container w3-green">
+			        <h:form class="w3-container w3-light-green w3-padding-8">
 
 						<h:panelGrid columns="2" cellpadding="">
 						    <h:outputLabel value="Benutzer:" styleClass="w3-text-sand"/>		     
@@ -102,11 +102,11 @@
 									    layout="table"/>				    
 							
 						</h:panelGrid>
-					    <p><h:commandButton 
+					    <h:commandButton 
 			        			value="Login" 
 			        			action="#{authController.login()}"
 			        			styleClass="w3-btn w3-green w3-border w3-border-white w3-text-white"/>
-			        	</p>
+			        	
 			        </h:form>
 			    </div>
 
