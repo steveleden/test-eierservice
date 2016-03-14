@@ -35,7 +35,7 @@
 
 <h:body>
 
-	<div style="max-width: 1000px" class="w3-center">
+	<div style="max-width: 1000px">
 		<div class="w3-container w3-green">
 		    <ui:insert name="top">
 		    	<h2 class="w3-text-sand w3-center">
@@ -134,7 +134,7 @@
 								</li>
 								<li class="w3-hide-small">
 									<h:commandLink 	styleClass="w3-hover-lime"
-														value="Offene Bestellungen"
+														value="Bestellungen"
 														rendered="#{!benutzerBean.istAdministrator}"
 														action="#{bestellungVerwaltungController.startBestellungenKundeOffen()}" 
 											 			/>
@@ -204,7 +204,7 @@
 								</li>
 								<li>
 									<h:commandLink 	
-														value="Offene Bestellungen"
+														value="Bestellungen"
 														rendered="#{!benutzerBean.istAdministrator}"
 														action="#{bestellungVerwaltungController.startBestellungenKundeOffen()}" 
 											 			/>

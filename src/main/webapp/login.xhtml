@@ -30,20 +30,18 @@
 			        
 				</div>
 
-				<h:form class="w3-container w3-light-green w3-hide-small">
+				<h:form id="frm1" class="w3-container w3-light-green w3-hide-small">
 					<h:panelGrid columns="5" styleClass="w3-center" cellpadding="4" border="1">
 					    <h:outputLabel value="Benutzer:" styleClass="w3-text-sand"/>		     
 					    <h:inputText id="the_user"
-					    	value = "#{benutzerBean.name}"
-						    styleClass="w3-input w3-border w3-text-black"
+					    	value = "#{benutzerBean.name}"						    
 						    style="height: 30px;"
 					        required="true" 
 					        requiredMessage="Benutzername eingeben"
 					        />
 					    <h:outputLabel value="Passwort:" styleClass="w3-text-sand"/>		     
 					    <h:inputSecret id="the_password"  
-					    	value = "#{authController.password}"
-						    styleClass="w3-input w3-border w3-text-black"
+					    	value = "#{authController.password}"				    
 						    style="height: 30px;"
 					        required="true" 
 					        redisplay="false"
@@ -70,13 +68,12 @@
 	       		</h:form>
 
 			    <div id="login-expanded" class="w3-center w3-hide w3-hide-large w3-hide-medium">
-			        <h:form class="w3-container w3-light-green w3-padding-8">
+			        <h:form id="frm2" class="w3-container w3-light-green w3-padding-8">
 
 						<h:panelGrid columns="2" cellpadding="">
 						    <h:outputLabel value="Benutzer:" styleClass="w3-text-sand"/>		     
 						    <h:inputText id="the_user" 
 						    	value = "#{benutzerBean.name}"
-						    	styleClass="w3-input w3-border w3-text-black"
 						    	style="height: 30px;"
 						        required="true" 
 						        requiredMessage="Benutzername eingeben"
@@ -89,7 +86,6 @@
 						    <h:outputLabel value="Passwort:" styleClass="w3-text-sand"/>		     
 						    <h:inputSecret id="the_password"  
 						    	value = "#{authController.password}"
-						    	styleClass="w3-input w3-border w3-text-black"
 						    	style="height: 30px;"
 						        required="true" 
 						        redisplay="false"
@@ -111,7 +107,7 @@
 			    </div>
 
 			    <div class="w3-display-container w3-center w3-sand w3-padding-8" style="width: 100%;">
-			        <img src="images/chick.jpg" alt="H&uuml;hner" style="max-width: 100%;"/>
+			        <img src="images/chick.jpg" alt="Chick mit Ei" style="max-width: 100%;"/>
 			    </div>
 			</div>
 			
