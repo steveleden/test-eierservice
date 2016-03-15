@@ -14,22 +14,58 @@
 
 
 	<ui:define name="content">
-		<h2>Offene Bestellungen #{bestellungViewBean.bestellungView.kunde.nachname} #{bestellungViewBean.bestellungView.kunde.vorname}</h2>
-		<h:form>
+		<h2 >Offene Bestellungen #{bestellungViewBean.bestellungView.kunde.nachname} #{bestellungViewBean.bestellungView.kunde.vorname}</h2>
+		<h:form styleClass="w3-center">
+		
+<!-- 		Data Table schmal -->
 			<h:dataTable value="#{bestellungListeViewBean.bestellungListView}" var="bestellungItem"
-						 styleClass="datagrid" cellspacing="0">
+						 styleClass="datagrid w3-hide-medium w3-hide-large"
+						 cellspacing="0">
 				<h:column rendered="#{bestellungListeViewBean.anzahlStatusBestellt>0}">
 					<f:facet name="header" ></f:facet>
 					<h:selectBooleanCheckbox value="#{bestellungItem.checked}" 
 											 rendered="#{bestellungItem.bestellung.status == 1}"/>
 				</h:column>
 				<h:column >
-					<f:facet name="header" >Bestell<br />Nr </f:facet>
-					#{bestellungItem.bestellung.id}
+					<f:facet name="header">gewuenschter<br />Liefertermin</f:facet>
+					<h:outputText value="#{bestellungItem.bestellung.liefertermin}"
+								  >
+						<f:convertDateTime locale="de_CH" pattern="E, d.M.yyyy" timeZone="#{globalBean.localTimeZone}"/>
+					</h:outputText>
 				</h:column>
 				<h:column>
+					<f:facet name="header">Status</f:facet>
+					#{bestellungItem.statusBestellung}
+				</h:column>
+				<h:column>
+					<f:facet name="header">Anzahl</f:facet>
+					#{bestellungItem.bestellung.anzahl}
+				</h:column>
+				<h:column>
+					<f:facet name="header">Preis</f:facet>
+					<h:outputText value="#{bestellungItem.bestellung.preistotal}">
+						<f:convertNumber minFractionDigits="2" maxFractionDigits="2" locale="de_CH" />
+					</h:outputText>
+				</h:column>
+			</h:dataTable>
+
+<!-- 		Data Table breit -->
+			<h:dataTable value="#{bestellungListeViewBean.bestellungListView}" var="bestellungItem"
+						 styleClass="datagrid w3-hide-small"
+						 cellspacing="0">
+				<h:column rendered="#{bestellungListeViewBean.anzahlStatusBestellt>0}">
+					<f:facet name="header" ></f:facet>
+					<h:selectBooleanCheckbox value="#{bestellungItem.checked}" 
+											 rendered="#{bestellungItem.bestellung.status == 1}"/>
+				</h:column>
+				<h:column >
+					<f:facet name="header">Bestell<br />Nr </f:facet>
+					#{bestellungItem.bestellung.id}
+				</h:column>
+				<h:column >
 					<f:facet name="header">gewuenschter<br />Liefertermin</f:facet>
-					<h:outputText value="#{bestellungItem.bestellung.liefertermin}">
+					<h:outputText value="#{bestellungItem.bestellung.liefertermin}"
+								  >
 						<f:convertDateTime locale="de_CH" pattern="E, d.M.yyyy" timeZone="#{globalBean.localTimeZone}"/>
 					</h:outputText>
 				</h:column>
