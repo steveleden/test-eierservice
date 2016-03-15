@@ -30,19 +30,20 @@
 			        
 				</div>
 
+<!-- 				Login Grossbild -->
 				<h:form id="frm1" class="w3-container w3-light-green w3-hide-small">
 					<h:panelGrid columns="5" styleClass="w3-center" cellpadding="4" border="1">
 					    <h:outputLabel value="Benutzer:" styleClass="w3-text-sand"/>		     
 					    <h:inputText id="the_user"
 					    	value = "#{benutzerBean.name}"						    
-						    style="height: 30px;"
+						    style="height: 30px; width: 100%"
 					        required="true" 
 					        requiredMessage="Benutzername eingeben"
 					        />
 					    <h:outputLabel value="Passwort:" styleClass="w3-text-sand"/>		     
 					    <h:inputSecret id="the_password"  
 					    	value = "#{authController.password}"				    
-						    style="height: 30px;"
+						    style="height: 30px; width: 100%;"
 					        required="true" 
 					        redisplay="false"
 					        requiredMessage="Passwort eingeben" >
@@ -67,14 +68,15 @@
 
 	       		</h:form>
 
+<!-- 				Login Schmalbild -->
 			    <div id="login-expanded" class="w3-center w3-hide w3-hide-large w3-hide-medium">
 			        <h:form id="frm2" class="w3-container w3-light-green w3-padding-8">
 
 						<h:panelGrid columns="2" cellpadding="">
-						    <h:outputLabel value="Benutzer:" styleClass="w3-text-sand"/>		     
-						    <h:inputText id="the_user" 
+						    <h:outputLabel value="Benutzer:" styleClass="w3-text-sand w3-right"/>		     
+						    <h:inputText id="the_user" styleClass="w3-left"
 						    	value = "#{benutzerBean.name}"
-						    	style="height: 30px;"
+						    	style="height: 30px; width: 100%; max-width: 250px"
 						        required="true" 
 						        requiredMessage="Benutzername eingeben"
 						        />
@@ -83,10 +85,10 @@
 										styleClass="messages"
 									    id="error1"
 									    layout="table"/>				        
-						    <h:outputLabel value="Passwort:" styleClass="w3-text-sand"/>		     
-						    <h:inputSecret id="the_password"  
+						    <h:outputLabel value="Passwort:" styleClass="w3-text-sand w3-right"/>		     
+						    <h:inputSecret id="the_password" styleClass="w3-left" 
 						    	value = "#{authController.password}"
-						    	style="height: 30px;"
+						    	style="height: 30px; width: 100%; max-width: 250px"
 						        required="true" 
 						        redisplay="false"
 						        requiredMessage="Passwort eingeben" >
