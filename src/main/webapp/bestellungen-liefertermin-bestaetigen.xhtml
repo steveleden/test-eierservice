@@ -14,27 +14,29 @@
 	<ui:define name="content">
 		<h2>Liefertermin zu diesen Bestellungen bestaetigen</h2>
 		<h:form>
-			<h:dataTable value="#{bestellungListeViewBean.bestellungListView}" var="bestellungItem"
-						 styleClass="datagrid" cellspacing="0">
+			<div class="w3-responsive">
+				<h:dataTable value="#{bestellungListeViewBean.bestellungListView}" var="bestellungItem"
+							 styleClass="datagrid" cellspacing="0">
+					<h:column>
+						<f:facet name="header">Liefertermin</f:facet>
+						<h:outputText value="#{bestellungItem.bestellung.liefertermin}">
+							<f:convertDateTime locale="de_CH" pattern="E, d.M.yyyy" timeZone="#{globalBean.localTimeZone}"/>
+						</h:outputText>
+					</h:column>
+					<h:column>
+						<f:facet name="header">Anzahl</f:facet>
+						#{bestellungItem.bestellung.anzahl}
+					</h:column>
 				<h:column>
-					<f:facet name="header">Liefertermin</f:facet>
-					<h:outputText value="#{bestellungItem.bestellung.liefertermin}">
-						<f:convertDateTime locale="de_CH" pattern="E, d.M.yyyy" timeZone="#{globalBean.localTimeZone}"/>
-					</h:outputText>
+					<f:facet name="header">Kunde</f:facet>
+					<h:outputText value="#{bestellungItem.kunde.nachname}" style="margin: 5px"/>
+					<h:outputText value="#{bestellungItem.kunde.vorname}"  style="margin: 5px"/>
 				</h:column>
 				<h:column>
-					<f:facet name="header">Anzahl</f:facet>
-					#{bestellungItem.bestellung.anzahl}
-				</h:column>
-			<h:column>
-				<f:facet name="header">Kunde</f:facet>
-				<h:outputText value="#{bestellungItem.kunde.nachname}" style="margin: 5px"/>
-				<h:outputText value="#{bestellungItem.kunde.vorname}"  style="margin: 5px"/>
-			</h:column>
-			<h:column>
-				<f:facet name="header">Kommentar</f:facet>
-				#{bestellungItem.bestellung.kommentar}
-			</h:column>			</h:dataTable>
+					<f:facet name="header">Kommentar</f:facet>
+					#{bestellungItem.bestellung.kommentar}
+				</h:column>			</h:dataTable>
+			</div>
 			<br />
 			<h:panelGroup style="margin: 50px 0px 0px 0px">
 				<h:outputLabel value="Bestaetigter Liefertermin:" />

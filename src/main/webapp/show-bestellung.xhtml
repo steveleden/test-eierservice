@@ -11,6 +11,7 @@
 
 	<ui:composition template="/WEB-INF/template/BasicTemplate.xhtml">
 
+	
 		<ui:define name="content">
 			<div class="w3-row">
 				<div class="w3-half">
@@ -32,15 +33,12 @@
 						</c:otherwise>
 						</c:choose>
 					
-						<h:panelGrid columns="2" style="max-width: 300px">
+						<h:panelGrid columns="2" style="max-width: 230px">
 						
 							<h:outputLabel value="Kunde:" />
-							<h:panelGrid columns="2">
-								<h:outputText value="#{bestellungVerwaltungController.bestellungViewBean.bestellungView.kunde.nachname}" 
+								<h:outputText
+								  		   value="#{bestellungVerwaltungController.bestellungViewBean.bestellungView.kunde.nachname} #{bestellungVerwaltungController.bestellungViewBean.bestellungView.kunde.vorname}" 
 											  />
-								<h:outputText value="#{bestellungVerwaltungController.bestellungViewBean.bestellungView.kunde.vorname}" 
-											  />
-							</h:panelGrid>
 							<h:outputLabel value="Anzahl:" />
 							<h:inputText id="show_bestellung_anzahl"
 										 value="#{bestellungViewBean.bestellungView.bestellung.anzahl}" 

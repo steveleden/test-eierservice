@@ -52,62 +52,7 @@
 	
 				 	<ui:insert name="left">
 				 	
-				 		<h:form>
-					 		<h:panelGrid id="leftLanePanelGrid" >
-			
-								<h:commandButton 	styleClass="mainButton"
-													value="Bestellen"
-													action="#{bestellungVerwaltungController.startBestellungErfassen()}" 
-										 			disabled="true"/>
-								<h:commandButton 	styleClass="mainButton"
-													value="Offene Bestellungen"
-													rendered="#{!benutzerBean.istAdministrator}"
-													action="#{bestellungVerwaltungController.startBestellungenKundeOffen()}" 
-										 			disabled="true"/>
-								<h:commandButton 	styleClass="mainButton"
-													value="Benutzerkonto"
-													rendered="#{!benutzerBean.istAdministrator}"
-													action="#{kundenVerwaltungController.startBenutzerKontoMutieren()}" 
-										 			disabled="true"/>
-								<h:commandButton 	styleClass="mainButton"
-													value="Bestaetigen"
-													rendered="#{benutzerBean.istAdministrator}"
-													action="#{bestellungVerwaltungController.startBestellungBestaetigen()}" 
-										 			disabled="true"/>
-								<h:commandButton 	styleClass="mainButton"
-													value="Liefern"
-													rendered="#{benutzerBean.istAdministrator}"
-													action="#{bestellungVerwaltungController.startBestellungLiefern()}" 
-										 			disabled="true"/>
-								<h:commandButton 	styleClass="mainButton"
-													value="Offene Zahlungen"
-													rendered="#{benutzerBean.istAdministrator}"
-													action="#{bestellungVerwaltungController.startBezahlungOffen()}" 
-										 			disabled="true"/>
-				 				<h:commandButton	styleClass="mainButton"
-				 									value="Benutzerverwaltung"
-				 									action="show-benutzerliste.xhtml"
-				 									rendered="#{benutzerBean.istAdministrator}"
-				 									disabled="true"/>									 
-								<h:commandButton 	styleClass="mainButton"
-													value="Kundenverwaltung" 
-													action="show-kundenliste.xhtml"
-													rendered="#{benutzerBean.istAdministrator}"
-													disabled="true"/>
-								<h:button 			styleClass="mainButton"
-													value="Kontakt" 
-													outcome="kontakt.xhtml"
-													disabled="true"/>
-								<h:commandButton 	styleClass="mainButton"
-												 	value="Logout" 
-												 	action="#{authController.logout()}"
-												 	disabled="true"
-												 />
-	
-							</h:panelGrid>
-						</h:form>	
-						<fieldset id="fieldLeftBottom" ></fieldset>  
-						<fieldset id="fieldLeftBottom2" ></fieldset>  
+ 
 				 	</ui:insert>
 	
 	
