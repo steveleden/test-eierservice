@@ -31,42 +31,43 @@
 				</div>
 
 <!-- 				Login Grossbild -->
-				<h:form id="frm1" class="w3-container w3-light-green w3-hide-small">
-					<h:panelGrid columns="5" styleClass="w3-center" cellpadding="4" border="1">
-					    <h:outputLabel value="Benutzer:" styleClass="w3-text-sand"/>		     
-					    <h:inputText id="the_user"
-					    	value = "#{benutzerBean.name}"						    
-						    style="height: 30px; width: 100%"
-					        required="true" 
-					        requiredMessage="Benutzername eingeben"
-					        />
-					    <h:outputLabel value="Passwort:" styleClass="w3-text-sand"/>		     
-					    <h:inputSecret id="the_password"  
-					    	value = "#{authController.password}"				    
-						    style="height: 30px; width: 100%;"
-					        required="true" 
-					        redisplay="false"
-					        requiredMessage="Passwort eingeben" >
-					    </h:inputSecret>
-						<h:panelGroup>
-						    <h:commandButton 
-				        			value="Login" 
-				        			action="#{authController.login()}"
-				        			styleClass="w3-btn w3-green w3-border w3-border-white w3-text-white"/>
-		         		</h:panelGroup>
-		         		<h:panelGrid></h:panelGrid>
-						<h:messages for="the_user"
-									styleClass="messages"
-								    id="error1"
-								    layout="table"/>				        
-		         		<h:panelGrid></h:panelGrid>
-						<h:messages for="the_password"
-									styleClass="messages"
-								    id="error2"
-								    layout="table"/>				    
-					</h:panelGrid>
-
-	       		</h:form>
+					<h:form id="frm1" class="w3-container w3-light-green w3-hide-small"
+							style="padding-top: 7px">
+						<h:panelGrid columns="5" styleClass="w3-center" cellpadding="4" border="1">
+						    <h:outputLabel value="Benutzer:" styleClass="w3-text-sand"/>		     
+						    <h:inputText id="the_user"
+						    	value = "#{benutzerBean.name}"						    
+							    style="height: 30px; width: 100%"
+						        required="true" 
+						        requiredMessage="Benutzername eingeben"
+						        />
+						    <h:outputLabel value="Passwort:" styleClass="w3-text-sand"/>		     
+						    <h:inputSecret id="the_password"  
+						    	value = "#{authController.password}"				    
+							    style="height: 30px; width: 100%;"
+						        required="true" 
+						        redisplay="false"
+						        requiredMessage="Passwort eingeben" >
+						    </h:inputSecret>
+							<h:panelGroup>
+							    <h:commandButton 
+					        			value="Login" 
+					        			action="#{authController.login()}"
+					        			styleClass="w3-btn w3-green w3-border w3-border-white w3-text-white"/>
+			         		</h:panelGroup>
+			         		<h:panelGrid></h:panelGrid>
+							<h:messages for="the_user"
+										styleClass="messages"
+									    id="error1"
+									    layout="table"/>				        
+			         		<h:panelGrid></h:panelGrid>
+							<h:messages for="the_password"
+										styleClass="messages"
+									    id="error2"
+									    layout="table"/>				    
+						</h:panelGrid>
+	
+		       		</h:form>
 
 <!-- 				Login Schmalbild -->
 			    <div id="login-expanded" class="w3-center w3-hide w3-hide-large w3-hide-medium">
