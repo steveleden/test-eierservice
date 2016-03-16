@@ -8,6 +8,7 @@
 
 	margin: 10px 5px 10px 5px;
 	padding:5px 20px;
+	min-width: 200px;
 	
 	-moz-box-shadow: 5px 5px 5px 0px #535763;
 	-webkit-box-shadow: 5px 5px 5px 0px #535763;
