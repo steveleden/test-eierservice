@@ -37,6 +37,7 @@
 				</fieldset>
 				<br />
 				<h:messages styleClass="messages" layout="table"/>
+				<div class="w3-center">
 				<h:commandButton action="#{kundenVerwaltungController.kontoDatenAbbrechen()}" value="Abbrechen" immediate="true"
 						 		 styleClass="normalButton"
 						 		 rendered="#{kundenVerwaltungController.dialogModus=='KUNDE_MUTIEREN'}"/>
@@ -49,6 +50,7 @@
 				<h:commandButton action="#{kundenVerwaltungController.kontoDatenSpeichern()}" value="Speichern"
 						 		 styleClass="normalButton"
 						 		 rendered="#{kundenVerwaltungController.dialogModus=='KUNDE_MUTIEREN'}"/>
+				</div>
 			</h:form>
 		</ui:define>
 	</ui:composition>
