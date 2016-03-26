@@ -13,28 +13,35 @@
 			<h:form id="frm">
 				<fieldset class="fieldset" >
 				<legend>Passwort &auml;ndern</legend>
-				<h:panelGrid columns="3">
-					<h:outputLabel value="Passwort:" />
+				<h:panelGrid columns="2" style="max-width:400px">
+					<h:outputLabel value="Passwort:"/>
 					<h:inputSecret id="pw_alt"
 								   value="#{passwortAendernController.pw}"
+								   style="width: 100%; max-width:200px"
 								   redisplay="false"
 								   required="true"
 								   requiredMessage="Passwort eingeben"/>
+					<h:panelGroup></h:panelGroup> 
 					<h:messages for="pw_alt" styleClass="messages" layout="table"/>
-					<br /> <h:panelGroup></h:panelGroup>  <h:panelGroup></h:panelGroup>
+					<h:panelGroup></h:panelGroup> 
+					<h:panelGroup><br /></h:panelGroup> 
 					<h:outputLabel value="Neues Passwort:" />
 					<h:inputSecret id="pw_neu1"
 								   value="#{passwortAendernController.pwNeu1}" 
+								   style="width: 100%; max-width:200px"
 								   redisplay="false"
 								   required="true"
 								   requiredMessage="Neues Passwort eingeben"/>
+					<h:panelGroup></h:panelGroup> 
 					<h:messages for="pw_neu1" styleClass="messages" layout="table"/>
 					<h:outputLabel value="Passwort wiederholen:" />
 					<h:inputSecret id="pw_neu2"
 								   value="#{passwortAendernController.pwNeu2}"
+								   style="width: 100%; max-width:200px"
 								   redisplay="false"
 								   required="true" 
 								   requiredMessage="Neues Passwort eingeben"/>
+					<h:panelGroup></h:panelGroup> 
 					<h:messages for="pw_neu2" styleClass="messages" layout="table"/>
 				</h:panelGrid>
 				</fieldset>
