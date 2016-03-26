@@ -12,7 +12,7 @@
 		<ui:define name="content">
 			<h:form id="frm">
 				<fieldset class="fieldset" >
-				<legend>Passwort aendern</legend>
+				<legend>Passwort &auml;ndern</legend>
 				<h:panelGrid columns="3">
 					<h:outputLabel value="Passwort:" />
 					<h:inputSecret id="pw_alt"
@@ -39,10 +39,10 @@
 				</h:panelGrid>
 				</fieldset>
 				<div class="w3-center">
+					<h:commandButton action="#{passwortAendernController.passwortSpeichern()}" value="Passwort &auml;ndern" 
+							 				 styleClass="normalButton"/>
 					<h:commandButton action="#{passwortAendernController.passwortAbbrechen()}" value="Abbrechen" immediate="true"
 							 			 styleClass="normalButton"/>
-					<h:commandButton action="#{passwortAendernController.passwortSpeichern()}" value="Passwort aendern" 
-							 				 styleClass="normalButton"/>
 				</div>
 			</h:form>
 		</ui:define>

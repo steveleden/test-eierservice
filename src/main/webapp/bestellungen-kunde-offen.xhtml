@@ -80,14 +80,14 @@
 					#{bestellungItem.bestellung.id}
 				</h:column>
 				<h:column >
-					<f:facet name="header">gewuenschter<br />Liefertermin</f:facet>
+					<f:facet name="header">gew&uuml;nschter<br />Liefertermin</f:facet>
 					<h:outputText value="#{bestellungItem.bestellung.liefertermin}"
 								  >
 						<f:convertDateTime locale="de_CH" pattern="E, d.M.yyyy" timeZone="#{globalBean.localTimeZone}"/>
 					</h:outputText>
 				</h:column>
 				<h:column>
-					<f:facet name="header">Liefertermin<br />bestaetigt</f:facet>
+					<f:facet name="header">Liefertermin<br />best&auml;tigt</f:facet>
 					<h:outputText value="#{bestellungItem.bestellung.lieferterminBestaetigt}">
 						<f:convertDateTime locale="de_CH" pattern="E, d.M.yyyy" timeZone="#{globalBean.localTimeZone}"/>
 					</h:outputText>

@@ -28,11 +28,11 @@
 						
 						<h:outputLabel value="Anzahl:" />
 						<h:outputText value="#{bestellungViewBean.bestellungView.bestellung.anzahl}" /> 			
-						<h:outputLabel value="Bestaetigter Liefertermin:" />
+						<h:outputLabel value="Best&auml;tigter Liefertermin:" />
 						<h:outputText value="#{bestellungViewBean.bestellungView.bestellung.lieferterminBestaetigt}" >
 							<f:convertDateTime locale="de" pattern="E, d.M.yyyy" timeZone="#{globalBean.localTimeZone}"/>
 						</h:outputText>
-						<h:outputLabel value="gewuenschter Liefertermin:" />
+						<h:outputLabel value="Gew&uuml;nschter Liefertermin:" />
 						<h:outputText value="#{bestellungViewBean.bestellungView.bestellung.liefertermin}" >
 							<f:convertDateTime locale="de" pattern="E, d.M.yyyy" timeZone="#{globalBean.localTimeZone}"/>
 						</h:outputText>
