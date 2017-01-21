@@ -1,0 +1,38 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head>
+	Einzahlung
+</h:head> 
+<body> 
+	<ui:composition template="/WEB-INF/template/BasicTemplate.xhtml">
+		<ui:define name="content">
+			<h:form>
+				<fieldset class="fieldset" >
+				<legend>Einzahlung erfassen</legend>
+					<h:outputLabel value="#{kundeViewBean.kundeView.kunde.vorname}"/>
+					<h:outputLabel value="#{kundeViewBean.kundeView.kunde.nachname}" />
+					<br />
+					<h:outputLabel value="Aktuelles Guthaben:"/>
+					<h:outputLabel value="#{kundeViewBean.kundeView.kunde.guthaben}" />
+					<br />
+					<h:outputLabel value="Einzahlungsbetrag:"/>
+					<br />
+					<h:inputText id="show_einzahlung_betrag"
+								 style="width : 100px;"
+								 value="#{kundeViewBean.kundeView.einzahlung}"/>
+				</fieldset>
+				<br />
+				<div>
+					<h:commandButton action="#{kundenVerwaltungController.einzahlungKundeSpeichern()}" value="Speichern" 
+							 				 styleClass="normalButton"/>
+					<h:commandButton action="#{kundenVerwaltungController.einzahlungErfassenAbbrechen()}" value="Abbrechen" immediate="true"
+							 			 styleClass="normalButton"/>
+				</div>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</body> 
+</html>
