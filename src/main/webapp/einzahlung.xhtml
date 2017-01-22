@@ -10,19 +10,22 @@
 	<ui:composition template="/WEB-INF/template/BasicTemplate.xhtml">
 		<ui:define name="content">
 			<h:form>
-				<fieldset class="fieldset" >
+				<fieldset class="fieldset" style="max-width: 400px">
 				<legend>Einzahlung erfassen</legend>
-					<h:outputLabel value="#{kundeViewBean.kundeView.kunde.vorname}"/>
-					<h:outputLabel value="#{kundeViewBean.kundeView.kunde.nachname}" />
-					<br />
-					<h:outputLabel value="Aktuelles Guthaben:"/>
-					<h:outputLabel value="#{kundeViewBean.kundeView.kunde.guthaben}" />
-					<br />
-					<h:outputLabel value="Einzahlungsbetrag:"/>
-					<br />
-					<h:inputText id="show_einzahlung_betrag"
-								 style="width : 100px;"
-								 value="#{kundeViewBean.kundeView.einzahlung}"/>
+					<h:panelGrid columns="2" >
+						<h:outputLabel value="Kunde: " />
+						<h:outputText value="#{kundeViewBean.kundeView.kunde.vorname}  #{kundeViewBean.kundeView.kunde.nachname}"/>
+						<h:outputLabel value="Aktuelles Guthaben:"/>
+						<h:outputText value="#{kundeViewBean.kundeView.kunde.guthaben}" />
+						<h:outputLabel value="Einzahlungsbetrag:"/>
+						<h:inputText id="show_einzahlung_betrag"
+									 style="width : 100px;"
+									 value="#{kundeViewBean.kundeView.einzahlung}"
+									 converterMessage="Bitte gueltige Anzahl eingeben."						             
+									 />
+						<h:panelGroup></h:panelGroup>
+					    <h:messages styleClass="messages" layout="table"/>	
+				    </h:panelGrid>						 
 				</fieldset>
 				<br />
 				<div>
