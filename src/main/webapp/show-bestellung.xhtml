@@ -46,7 +46,7 @@
 							             required="true" requiredMessage="Bitte Anzahl eingeben."
 							             validatorMessage="Bitte Anzahl eingeben."
 							             converterMessage="Bitte gueltige Anzahl eingeben."						             
-							             style=" width : 30px;"
+							             style=" width : 40px;"
 							             rendered="#{bestellungVerwaltungController.dialogModus=='BESTELLUNG_ERFASSEN'
 							             		  or bestellungVerwaltungController.dialogModus=='BESTELLUNG_MUTIEREN'}">
 								<f:validateLongRange minimum="1" maximum="99" />
@@ -85,14 +85,15 @@
 										  rendered="#{bestellungVerwaltungController.dialogModus=='BESTELLUNG_BESTELLEN'}">
 								<f:convertNumber minFractionDigits="2" maxFractionDigits="2" locale="de_CH" />
 							</h:outputText>
-							<h:panelGroup></h:panelGroup>
-							<h:panelGroup rendered="#{bestellungVerwaltungController.dialogModus=='BESTELLUNG_BESTELLEN'}">
-								<div style="width: 100%">
-									<h:outputText value="Dein Guthaben wird erst bei Lieferung belastet." 
-												  />
-								</div>
-							</h:panelGroup>
 						</h:panelGrid>
+
+						<h:panelGroup rendered="#{bestellungVerwaltungController.dialogModus=='BESTELLUNG_BESTELLEN'}">
+							<div style="width: 100%; padding-left: 4px">
+								<h:outputText value="Dein Guthaben wird erst bei Lieferung belastet." 
+											  />
+							</div>
+						</h:panelGroup>
+
 	
 						<h:panelGrid columns="1" style="width: 100%">
 	
