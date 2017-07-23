@@ -17,7 +17,6 @@ import ejb.KundenVerwaltungInt;
 import entity.Bestellung;
 import entity.Kunde;
 
-
 @ManagedBean
 @SessionScoped
 public class BestellungVerwaltungController implements Serializable {
