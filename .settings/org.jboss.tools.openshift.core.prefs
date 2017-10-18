@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+org.jboss.tools.openshift.Connection=https\://ledeferien@console.starter-ca-central-1.openshift.com
+org.jboss.tools.openshift.DeployProject=Test-Eierservice
+org.jboss.tools.openshift.PodPath=
+org.jboss.tools.openshift.Service=eggtest@wildfly
+org.jboss.tools.openshift.SourcePath=${workspace_loc\:/Test-Eierservice}
