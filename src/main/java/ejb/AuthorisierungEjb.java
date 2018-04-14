@@ -21,6 +21,7 @@ public class AuthorisierungEjb implements AuthorisierungInt{
 	@Override
 	public Integer authorisiert(String benutzerName, String pw)  {
 	
+		
 		Benutzer benutzer = benutzerVerwaltung.leseBenutzerByName(benutzerName);
 
 		if (benutzer != null) {
